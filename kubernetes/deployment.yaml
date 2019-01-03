@@ -23,7 +23,7 @@ spec:
         # - -s malloc,128m
         volumeMounts:
         - name: template
-          mountPath: /etc/varnish/default.vcl
+          mountPath: /etc/varnish
       volumes:
       - name: template
         configMap:
