@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cache
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: cache
+        image: docker.io/whywaita/varnish60lts
+        imagePullPolicy: Always
+        # args:
+        # - -F
+        # - -f /etc/varnish/default.vcl
+        # - -a :80
+        # - -s malloc,128m
+        volumeMounts:
+        - name: template
+          mountPath: /etc/varnish/default.vcl
+      volumes:
+      - name: template
+        configMap:
+          name: vcl-template
