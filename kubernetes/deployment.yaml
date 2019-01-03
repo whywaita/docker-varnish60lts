@@ -4,7 +4,13 @@ metadata:
   name: cache
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: varnish
   template:
+    metadata:
+      labels:
+        app: varnish
     spec:
       containers:
       - name: cache
