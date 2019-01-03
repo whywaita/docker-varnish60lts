@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: cache
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - protocol: TCP
     port: 80

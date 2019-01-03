@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: varnish
+      app: cache
   template:
     metadata:
       labels:
-        app: varnish
+        app: cache
     spec:
       containers:
       - name: cache
