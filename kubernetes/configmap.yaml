@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: vcl-template
 data:
-  default.vcl.tmpl: |
+  default.vcl: |
     vcl 4.0;
 
     acl purge {
